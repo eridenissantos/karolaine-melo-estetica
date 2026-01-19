@@ -1,0 +1,10 @@
+# Pastas
+node_modules/
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Ambiente
+.env
