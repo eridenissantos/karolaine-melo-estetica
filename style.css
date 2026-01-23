@@ -5,6 +5,7 @@
     font-family: var(--fonte-principal);
 }
 
+
 /*cores*/
 :root {
 
@@ -34,15 +35,24 @@
     --fonte-titulo: 2rem;
     --fonte-texto: 1rem;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: var(--nudeAreia);
+    background-color: var(--brancoElegante, 0.80);
+    border-bottom: 2px solid var(--nudeClaro);
+    backdrop-filter: blur(10px);
     height: auto;
-    box-shadow: 1px 2px 5px var(--cinzaQuente);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -93,28 +103,30 @@ section .nav-paginas {
 }
 
 .btn {
-    background-color: var(--marromGrafite);
+    background-color: var(--nudeClaro);
     width: 30%;
     height: 2rem;
-    border: none;
-    border-radius: 10px;
+    border: 1px solid var(--marromGrafite);
     cursor: pointer;
     transition:
         color 0.3s ease,
         text-shadow 0.3s ease,
         transform 0.3s ease;
+    letter-spacing: 2px;
 }
 
 .btn a {
     font-size: var(--fonte-texto);
     text-decoration: none;
     list-style: none;
-    color: var(--douradoSuave);
+    color: var(--pretoSuave);
     cursor: pointer;
+    
 }
 
 .btn:hover {
     box-shadow: 1px 1px 4px var(--veludoAmeixa);
+    background-color: var(--nudeAreia);
 }
 
 body {
@@ -130,7 +142,12 @@ section.banner {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    background: linear-gradient(135deg, var(--brancoElegante) 0%, var(--nudeClaro) 90%);
+    border-radius: 50px;
+    border: 1px solid rgba(230, 199, 122, 0.3);
+    padding: 20px;
 }
+
 
 .titulo-banner {
     flex-direction: column;
@@ -141,16 +158,17 @@ section.banner {
     font-family: var(--fonte-secundaria);
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 1px 1px 5px var(--veludoAmeixa);
     margin-top: -80px;
-    background-color: var(--nudeClaro);
-    border-radius: 20px;
+    letter-spacing: 4px;
+    color: var(--veludoMarrom);
+    font-style: italic;
 }
 
 .titulo-banner h2 {
     padding-top: 2px;
     font-size: var(--fonte-texto);
     color: var(--veludoAmeixa);
+    font-style: italic;
 }
 .divisao h2 {
     text-align: center;
@@ -168,10 +186,11 @@ section.banner {
     font-size:50px;
     position: relative;
     font-size: 1.2rem;
-    overflow: auto;
     padding: 20px;
-    border-radius: 20px;
-    text-shadow: 1px 1px 5px var(--veludoAmeixa);
+    font-style: italic;
+    color: var(--pretoSuave);
+    border-left: 2px solid var(--douradoClassico);
+    margin-left: 10px;
 }
 
 
