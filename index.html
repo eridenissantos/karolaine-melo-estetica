@@ -39,15 +39,15 @@
     </header><!--CABEÇALHO FECHAMENTO-->
 
     <section class="btn-paginas">
+
         <nav class="nav-paginas">
-            <button type="button" class="btn">
-                <a href="#">RESULTADOS</a>
-            </button>
-            <button type="button" class="btn">
-                <a href="#">SOBRE NÓS</a>
-            </button>
-            <button type="button" class="btn"><a href="#">AGENDAR <i class="bi bi-clipboard-check"></i></a>
-            </button>
+
+            <a href="pages/resultados.html" class="btn">RESULTADOS</a>
+
+            <a href="pages/sobre.html" class="btn">SOBRE NÓS</a>
+
+            <a href="#" class="btn">AGENDAR <i class="bi bi-clipboard-check"></i></a>
+
         </nav>
 
     </section><!--BOTÕES DE REDIRECIONAMENTO PAGES, FECHAMENTO-->
@@ -58,7 +58,7 @@
             <h3>Estética Avançada &<br> Protocolo de Emagrecimento</h3>
         </div>
 
-        <div class="banner">
+        <div class="banner-imagem">
             <img class="img-banner" width="380px" height="450px" src="img/karol-banner.png.png" alt="Foto Karolaine">
         </div>
 
@@ -69,40 +69,71 @@
     </section>
 
     <main>
-        <nav class="especialidades">
+        <section class="container">
 
-        <div class="card">
-            <a href="#">
-                <img  src="img/drenagem.png" alt="Drenagem Linfática">
-            </a>
-            <h3>Drenagem Linfática</h3>
-            <p>
-                Técnica que estimula o sistema linfático, reduz inchaço e melhora a circulação.
-            </p>
-        </div>
+            <div class="card">
 
-        <div class="card">
-            <a href="#">
-                <img src="img/lipo-enzimatica.png" alt="Lipo Enzimática">
-            </a>
-            <h3>Lipo Enzimática</h3>
-            <p>
-                Tratamento estético não cirúrgico que ajuda a eliminar gordura localizada
-                através da aplicação de enzimas.
-            </p>
-        </div>
+                <a href="#">
+                    <img src="img/drenagem.png" alt="Lipo Enzimática" loading="lazy">
+                </a>
 
-        <div class="card">
-            <a href="#">
-                <img src="img/emagrecimento.png" alt="Protocolo de Emagrecimento">
-            </a>
-            <h3>Protocolo de Emagrecimento</h3>
-            <p>
-                Programa personalizado para redução de medidas e melhora da composição corporal.
-            </p>
-        </div>
+                <h3>Drenagem Linfática</h3>
+                <p>
+                    Técnica que estimula o sistema linfático, reduz inchaço e melhora a circulação.
+                </p>
+            </div>
 
-        </nav>
+            <div class="card">
+                <a href="#">
+                    <img src="img/lipo-enzimatica.png" alt="Lipo Enzimática" loading="lazy">
+                </a>
+                <h3>Lipo Enzimática</h3>
+                <p>
+                    Tratamento estético não cirúrgico que ajuda a eliminar gordura localizada
+                    através da aplicação de enzimas.
+                </p>
+            </div>
+
+            <div class="card">
+                <a href="#">
+                    <img src="img/emagrecimento.png" alt="Protocolo de Emagrecimento">
+                </a>
+                <h3>Protocolo de Emagrecimento</h3>
+                <p>
+                    Programa personalizado para redução de medidas e melhora da composição corporal.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="divisao">
+            <h2>NOSSO ESPAÇO</h2>
+
+            <section class="container-nossoespaco">
+
+                <div class="card">
+                    <h3>Ambiente Acolhedor</h3>
+                    <p>
+                        Conforto, bom atendimento e um ambiente feito para você.<br>
+                        Rua do Prado, em frente à Dantas Equipadora e AutoNove.
+                        <a href="pages/sobre.html#localizacao">Ver Localização</a>
+                    </p>
+
+                    <div class="efeito-nossoespaco">
+                    <video width="250px" height="350px" autoplay muted loop playsinline>
+                        <source src="assets/nosso-atendimento.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos. Este vídeo mostra nosso ambiente acolhedor.
+                    </video>
+                    </div>
+
+
+
+                </div>
+
+            </section>
+        </section>
+
+
     </main>
 
 

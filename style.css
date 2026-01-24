@@ -35,29 +35,32 @@
     --fonte-titulo: 2rem;
     --fonte-texto: 1rem;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
 
+/*Desktop*/
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: var(--brancoElegante, 0.80);
+    background-color: var(--brancoElegante);
+    opacity: 0.95;
     border-bottom: 2px solid var(--nudeClaro);
     backdrop-filter: blur(10px);
     height: auto;
-    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 header .logo {
-    margin-top: 0.8em;
-    padding-bottom: 0.8em;
+    margin: 10px 0;
+    border: solid 1px var(--douradoClassico);
+    box-shadow: 1px 1px 1px var(--pretoSuave);
 }
 
 header .redes-sociais {
@@ -94,7 +97,7 @@ section.btn-paginas {
 }
 
 section .nav-paginas {
-    text-align: center;
+
     width: 80%;
     margin: 1.5rem auto;
     display: flex;
@@ -113,16 +116,14 @@ section .nav-paginas {
         text-shadow 0.3s ease,
         transform 0.3s ease;
     letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--marromGrafite);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
 }
 
-.btn a {
-    font-size: var(--fonte-texto);
-    text-decoration: none;
-    list-style: none;
-    color: var(--pretoSuave);
-    cursor: pointer;
-    
-}
 
 .btn:hover {
     box-shadow: 1px 1px 4px var(--veludoAmeixa);
@@ -135,6 +136,7 @@ body {
 }
 
 /*banner titulo e imagem*/
+
 section.banner {
     width: 80%;
     display: flex;
@@ -170,6 +172,7 @@ section.banner {
     color: var(--veludoAmeixa);
     font-style: italic;
 }
+
 .divisao h2 {
     text-align: center;
     padding-top: 2px;
@@ -183,7 +186,7 @@ section.banner {
 .titulo-banner h3 {
     top: 150px;
     font-family: var(--fonte-secundaria);
-    font-size:50px;
+    font-size: 50px;
     position: relative;
     font-size: 1.2rem;
     padding: 20px;
@@ -193,6 +196,9 @@ section.banner {
     margin-left: 10px;
 }
 
+.banner-imagem {
+    max-width: 380px;
+}
 
 .img-banner {
     border-radius: 20px;
@@ -201,7 +207,7 @@ section.banner {
     box-shadow: 2px 2px 2px var(--veludoAmeixa);
 }
 
-.especialidades{
+.container {
     width: 80%;
     margin: 3rem auto;
     display: grid;
@@ -209,48 +215,89 @@ section.banner {
     gap: 2rem;
 }
 
-
-.card{
+.card {
     background-color: var(--brancoElegante);
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.card img{
-    width: 300px;
-    height: 400px;
+.card a {
+    text-decoration: none;
+    color: var(--douradoClassico);
+    cursor: pointer;
+}
+#video-drenagem{
+    width: 100%;
+    height: 280px;
+    max-width: 190px;
+
+}
+
+.card img {
+    width: 100%;
+    max-width: 190px;
+    height: 300px;
     border-radius: 15px;
     margin-bottom: 1rem;
 }
 
-.card h3{
+
+.card h3 {
     font-family: var(--fonte-secundaria);
     color: var(--veludoAmeixa);
     margin-bottom: 0.5rem;
 }
 
-.card p{
+.card p {
     font-size: var(--fonte-texto);
     color: var(--pretoSuave);
     line-height: 1.4;
 }
 
-@media (max-width: 1024px){
-    .especialidades{
+.container-nossoespaco {
+    display: block;
+    margin: auto;
+}
+
+.efeito-nossoespaco {
+    background: linear-gradient(to right, var(--brancoSuave), var(--nudeAreia));
+    border-radius: 15px;
+    width: 50%;
+    display: block;
+    margin: auto;
+    box-shadow: 1px 1px 1px var(--pretoSuave);
+}
+
+.card video {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/*desktop fechamento*/
+
+
+
+/*tablet*/
+@media (max-width: 1024px) {
+    .container {
         width: 90%;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
+/*smartphone*/
 
 @media (max-width: 768px) {
 
@@ -291,6 +338,7 @@ section.banner {
     .titulo-banner {
         align-items: center;
     }
+
     .divisao {
         align-items: center;
         text-align: center;
@@ -318,25 +366,25 @@ section.banner {
         height: auto;
         margin-top: 1.5rem;
     }
-    
-    .especialidades{
+
+    .container {
         width: 90%;
         grid-template-columns: 1fr;
     }
 
-    .card{
+    .card {
         padding: 1.2rem;
     }
 
-    .card img{
+    .card img {
         height: 300px;
     }
 
-    .card h3{
+    .card h3 {
         font-size: 1.2rem;
     }
 
-    .card p{
+    .card p {
         font-size: 1rem;
     }
 
