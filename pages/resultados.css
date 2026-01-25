@@ -1,0 +1,50 @@
+/* RESULTADOS */
+header h1{
+    font-family: var(--fonte-secundaria);
+    color: var(--veludoAmeixa);
+    text-shadow:0 0 1px var(--douradoChampanhe);
+}
+.banner-resultados {
+    background: linear-gradient(135deg, var(--nudeClaro), var(--brancoElegante));
+}
+
+.video-banner {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px var(--veludoAmeixa);
+}
+
+.container-resultados {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-resultado img {
+    height: 300px;
+    border-radius: 15px;
+    max-width: 350px;
+}
+
+.card-resultado p {
+    margin-top: 10px;
+    font-family: var(--fonte-secundaria);
+    color: var(--veludoAmeixa);
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 780px) {
+    .container-resultados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container-resultados {
+        grid-template-columns: 1fr;
+    }
+
+    .video-banner {
+        max-width: 280px;
+    }
+}

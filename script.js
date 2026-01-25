@@ -1,3 +1,4 @@
+/*botão flutuante whstapp*/
 const btn = document.getElementById("btnFlutuante");
 
 window.addEventListener("scroll", () => {
