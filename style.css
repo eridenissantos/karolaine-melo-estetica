@@ -180,7 +180,7 @@ section.banner {
     color: var(--veludoAmeixa);
     border-bottom: 2px solid var(--douradoClassico);
     width: 80%;
-    margin: 80px auto;
+    margin: 120px auto;
 }
 
 .titulo-banner h3 {
@@ -234,12 +234,6 @@ section.banner {
     color: var(--douradoClassico);
     cursor: pointer;
 }
-#video-drenagem{
-    width: 100%;
-    height: 280px;
-    max-width: 190px;
-
-}
 
 .card img {
     width: 100%;
@@ -283,15 +277,89 @@ section.banner {
     height: auto;
     margin-bottom: 1rem;
 }
+.container-duvidas{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container-duvidas img{
+    max-width: 200px;
+    height: auto;
+}
+.msg-duvidas{
+    border: solid 2px var(--douradoChampanhe);
+    padding: 10px 20px;
+    height: 250px;
+}
+.msg-duvidas p{
+    font-size: 1.2rem;
+    max-width: 250px;
+}
+.msg-duvidas a{
+    text-decoration: none;
+    color: var(--douradoClassico);
+}
+.container-depoimento{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 20px;
+    margin-bottom: 150px;
+}
+.depoimento-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-depoimento img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    height: 300px;
+    object-fit: contain;
+    border: solid 1px var(--douradoClassico);
+    box-shadow: 1px 1px 1px var(--pretoSuave);
+}
+footer{
+   background-color: var(--nudeQuente);
+   font-size: 1rem;
+   text-align: center;
+   color: var(--cinzaQuente);
+   margin-top: 150px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--veludoMarrom);
+}
+
+footer li{
+    list-style: none;
+    padding: 2px;
+    font-size: 1.5rem;
+    
+}
+
+.container-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 1.2rem;
+    
+}
+
 
 /*desktop fechamento*/
 
 
 
 /*tablet*/
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
     .container {
         width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container-depoimento{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -299,7 +367,7 @@ section.banner {
 
 /*smartphone*/
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     header {
         flex-direction: column;
@@ -371,6 +439,13 @@ section.banner {
         width: 90%;
         grid-template-columns: 1fr;
     }
+    .container-duvidas {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    .container-depoimento {
+        grid-template-columns: 1fr;
+    }
 
     .card {
         padding: 1.2rem;
@@ -388,4 +463,29 @@ section.banner {
         font-size: 1rem;
     }
 
+}
+
+#btnFlutuante {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btnFlutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
