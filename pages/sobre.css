@@ -1,0 +1,40 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sobre{
+    width: 100%;
+    padding: 5vh;
+}
+p{
+    width: 60%;
+    padding: 3vh 0;
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li{
+    list-style: square;
+    padding: 2vh 0;
+    text-indent: 5px;
+}
+
+.foto-sobre img{
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 9px #323232;
+}
+.foto-sobre i{
+    color: green;
+    font-size: 1.3rem;
+}
+@media(max-width: 680px){
+    main{
+        grid-template-columns: 1fr;
+    }
+    .foto-sobre img{
+        max-width: 300px;
+        display: block;
+        margin: auto;
+    }
+}
