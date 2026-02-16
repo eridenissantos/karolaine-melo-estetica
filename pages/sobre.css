@@ -23,6 +23,7 @@ li{
     height: auto;
     border-radius: 8px;
     box-shadow: 0 3px 9px #323232;
+    margin-bottom: 10px;
 }
 .foto-sobre i{
     color: green;
